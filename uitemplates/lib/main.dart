@@ -72,8 +72,30 @@ class MainScreen extends StatelessWidget {
                                 decoration: BoxDecoration(
                                 color:Colors.black.withOpacity(0.5),
                                 borderRadius:const BorderRadius.vertical(bottom: Radius.circular(8))),
-                                child: ListTile(title: Text('Online Education',style:TextStyle(color:Colors.white)))
-                              )
+                                child: Row( 
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(width:10),
+                                    Expanded(child: Text('Online Education',style:TextStyle(color:Colors.white,fontSize: 16))),
+                                    PopupMenuButton(   
+
+                                      child: Icon(Icons.more_vert,color:Colors.amber),  
+                                      
+                                      onSelected: (index){},
+                                      padding: const EdgeInsets.all(0),
+                                      itemBuilder:(context)=> [   
+                                          PopupMenuItem(
+                                            value: 0,
+                                            child: Text("Copy Code")
+                                        
+                                        
+                                          )]
+                                      
+                                     )]
+                                  
+                                  
+                                 
+                              ))
                                
                             ],
                             ),
